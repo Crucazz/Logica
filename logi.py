@@ -37,9 +37,8 @@ def envio():
     
     if len(problemaList)==5:
         for i in prolog.query("is_componente1(X,"+problemaList[0]+","+problemaList[1]+","+problemaList[2]+","+problemaList[3]+","+problemaList[4]+")"):
-            salida=salida+"Mayor prioridad de cambio: "+str(i["X"])+" \n\n"
-    
-    if len(problemaList)==3:
+            salida=salida+"Mayor prioridad de cambio: "+str(i["X"])+" \n\n"    
+    elif len(problemaList)==3:
     	for i in prolog.query("is_componente2(X,"+problemaList[0]+","+problemaList[1]+","+problemaList[2]+")"):
             salida=salida+"Mayor prioridad de cambio: "+str(i["X"])+" \n\n"
 
